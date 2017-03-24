@@ -40,7 +40,7 @@ void vmTimer(uint64_t durationSeconds, bool repeat = false)
 		{
 			// Time to dance
 			std::cout << "TIMER EXPIRED " << duration.count() << " seconds" << std::endl;
-			MessageBox(nullptr, "EVENT TIMER EXPIRED" , "TiMER" ,MB_ICONSTOP);
+			MessageBox(nullptr, "EVENT TIMER EXPIRED" , "TIMER" ,MB_ICONSTOP);
 
 			// 
 			if (!repeat) return;
