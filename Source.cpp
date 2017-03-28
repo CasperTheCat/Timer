@@ -9,13 +9,14 @@
 #include <windows.h>
 #endif
 
+
 #include <thread>
 #include <cstdint>
 #include <iostream>
 #include <vector>
 #include <chrono>
 #include <string>
-
+#include <string.h>#include <string.h>#include <string.h>
 //////////////////////////////////////////////////////////////////////////
 // Global bool
 //
@@ -40,7 +41,10 @@ void vmTimer(uint64_t durationSeconds, bool repeat = false)
 		{
 			// Time to dance
 			std::cout << "TIMER EXPIRED " << duration.count() << " seconds" << std::endl;
-			MessageBox(nullptr, "EVENT TIMER EXPIRED" , "TIMER" ,MB_ICONSTOP);
+#ifdef _WIN32			
+                        MessageBox(nullptr, "EVENT TIMER EXPIRED" , "TIMER" ,MB_ICONSTOP);
+#endif
+
 
 			// 
 			if (!repeat) return;
